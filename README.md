@@ -16,7 +16,7 @@ WhisperAssist is a full-stack AI voice assistant that converts speech to text us
 - 🗣️ **Speech-to-Text**: Fast, accurate transcription via Groq Whisper
 - 🤖 **AI Recommendations**: Llama-3.3-powered contextual responses
 - 💾 **History Tracking**: All recommendations stored and viewable
-- 🗑️ **Delete Controls**: Delete history or current result with confirmation
+- 🗑️ **Delete Controls**: Delete history or current result
 
 <div align="center">
   <img src="SS/1.png" alt="WhisperAssist Screenshot 1" width="350"/>
@@ -26,7 +26,6 @@ WhisperAssist is a full-stack AI voice assistant that converts speech to text us
   <img src="SS/5.png" alt="WhisperAssist Screenshot 5" width="350"/>
   <img src="SS/6.png" alt="WhisperAssist Screenshot 6" width="350"/>
 </div>
----
 
 ## 🛠️ Tech Stack
 
