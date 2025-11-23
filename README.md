@@ -1,57 +1,50 @@
 # WhisperAssist
 
-AI Voice Recommendation System built with MERN Stack + OpenAI
+**Modern AI Voice Assistant powered by Groq (Whisper & Llama-3.3)**
+
+---
 
 ## 🎯 Overview
 
-WhisperAssist is a full-stack application that converts speech to text using OpenAI Whisper, retrieves contextual instructions from MongoDB, and generates intelligent recommendations using GPT. All interactions are stored for future reference and analysis.
+WhisperAssist is a full-stack AI voice assistant that converts speech to text using Groq Whisper, generates intelligent recommendations with Llama-3.3, and stores all interactions for future reference. The app features robust audio controls (pause, resume, cancel), history management (view, delete), and a clean, mobile-responsive UI.
+
+---
 
 ## ✨ Features
 
-## 🛠️ Tech Stack
+- 🎤 **Voice Recording**: Modern browser-based audio recording with pause, resume, and cancel
+- 🗣️ **Speech-to-Text**: Fast, accurate transcription via Groq Whisper
+- 🤖 **AI Recommendations**: Llama-3.3-powered contextual responses
+- 💾 **History Tracking**: All recommendations stored and viewable
+- 🗑️ **Delete Controls**: Delete history or current result with confirmation
 
-### Frontend
-
-### Backend
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-# WhisperAssist
-
-AI Voice Recommendation System built with MERN Stack + Groq (Whisper & Llama-3.3)
-
-## 🎯 Overview
-
-WhisperAssist is a full-stack application that converts speech to text using Groq Whisper, retrieves contextual instructions from MongoDB, and generates intelligent recommendations using Llama-3.3. All interactions are stored for future reference and analysis.
-
-## ✨ Features
-
-- 🎤 **Voice Recording**: Browser-based audio recording
-- 🗣️ **Speech-to-Text**: Powered by Groq Whisper
-- 🤖 **AI Recommendations**: Llama-3.3-powered intelligent responses
-- 💾 **History Tracking**: All recommendations stored in MongoDB
-- 📝 **Custom Instructions**: Configurable AI behavior per user
-- 🎨 **Modern UI**: Beautiful interface with Tailwind CSS
+<div align="center">
+  <img src="SS/1.png" alt="WhisperAssist Screenshot 1" width="350"/>
+  <img src="SS/2.png" alt="WhisperAssist Screenshot 2" width="350"/>
+  <img src="SS/3.png" alt="WhisperAssist Screenshot 3" width="350"/>
+  <img src="SS/4.png" alt="WhisperAssist Screenshot 4" width="350"/>
+  <img src="SS/5.png" alt="WhisperAssist Screenshot 5" width="350"/>
+  <img src="SS/6.png" alt="WhisperAssist Screenshot 6" width="350"/>
+</div>
+---
 
 ## 🛠️ Tech Stack
 
-### Frontend
+**Frontend:**
 
-- React 18
-- Vite
+- React
 - Tailwind CSS
-- Axios
-- Lucide React (Icons)
+- lucide-react (icons)
 
-### Backend
+**Backend:**
 
 - Node.js
 - Express.js
-- MongoDB + Mongoose
+- MongoDB
 - Groq SDK (Whisper & Llama-3.3)
-- Multer (File uploads)
+- Multer (file uploads)
+
+---
 
 ## 🚀 Quick Start
 
@@ -59,180 +52,62 @@ WhisperAssist is a full-stack application that converts speech to text using Gro
 
 - Node.js v16+
 - MongoDB (local or Atlas)
-- Groq API Key (get one at https://console.groq.com/keys)
+- Groq API Key ([get one here](https://console.groq.com/keys))
 
 ### Installation
 
 1. **Clone the repository**
-
-```bash
-git clone https://github.com/mandinumaneth/whisperAssist.git
-cd whisperAssist
-```
-
+   ```bash
+   git clone https://github.com/mandinumaneth/whisperAssist.git
+   cd whisperAssist
+   ```
 2. **Install backend dependencies**
-
-```bash
-cd backend
-npm install
-```
-
+   ```bash
+   cd backend
+   npm install
+   ```
 3. **Install frontend dependencies**
-
-```bash
-cd ../frontend
-npm install
-```
-
+   ```bash
+   cd ../frontend
+   npm install
+   ```
 4. **Configure environment variables**
-
-Create `backend/.env`:
-
-```env
-PORT=5000
-NODE_ENV=development
-MONGODB_URI=mongodb://localhost:27017/whisperassist
-OPENAI_API_KEY=your_openai_api_key_here
-FRONTEND_URL=http://localhost:5173
-```
-
-4. **Configure environment variables**
-
-Create `backend/.env`:
-
-```env
-PORT=5000
-NODE_ENV=development
-MONGODB_URI=mongodb://localhost:27017/whisperassist
-USE_GROQ=true
-GROQ_API_KEY=your_groq_api_key_here
-FRONTEND_URL=http://localhost:5173
-```
-
+   Create `backend/.env`:
+   ```env
+   PORT=5000
+   NODE_ENV=development
+   MONGODB_URI=mongodb://localhost:27017/whisperassist
+   USE_GROQ=true
+   GROQ_API_KEY=your_groq_api_key_here
+   FRONTEND_URL=http://localhost:5173
+   ```
 5. **Start the backend**
-
-```bash
-cd backend
-npm run dev
-```
-
+   ```bash
+   cd backend
+   npm run dev
+   ```
 6. **Start the frontend** (in a new terminal)
-
-```bash
-cd frontend
-npm run dev
-```
-
+   ```bash
+   cd frontend
+   npm run dev
+   ```
 7. **Open your browser**
+   - http://localhost:5173
 
-```
-http://localhost:5173
-```
-
-## 📖 Documentation
-
-- [Complete Setup Guide](./SETUP_GUIDE.md) - Detailed installation and configuration
-- [Postman API Guide](./POSTMAN_GUIDE.md) - API testing instructions
-
-## 🎮 Usage
-
-1. Click the microphone button
-2. Allow microphone permissions
-3. Speak your request clearly
-4. Click stop when finished
-5. Wait for AI transcription and recommendation
-6. View your history anytime
-
-## 📁 Project Structure
-
-```
-whisperAssist/
-├── backend/
-│   ├── src/
-│   │   ├── config/          # Database configuration
-│   │   ├── controllers/     # Request handlers
-│   │   ├── middleware/      # Custom middleware
-│   │   ├── models/          # MongoDB schemas
-│   │   ├── routes/          # API routes
-│   │   ├── services/        # Business logic
-│   │   └── server.js        # Entry point
-│   └── package.json
-│
-└── frontend/
-    ├── src/
-    │   ├── components/      # React components
-    │   ├── services/        # API integration
-    │   └── App.jsx          # Main component
-    └── package.json
-```
+---
 
 ## 🔌 API Endpoints
 
 ### Recommendations
 
-- `POST /api/recommendations` - Create new recommendation from audio
-- `GET /api/recommendations` - Get recommendation history
-- `GET /api/recommendations/:id` - Get specific recommendation
+- `POST /api/recommendations` — Create a new recommendation from audio
+- `GET /api/recommendations` — Get all recommendation history
+- `GET /api/recommendations/:id` — Get a specific recommendation
+- `DELETE /api/recommendations/:id` — Delete a recommendation
 
 ### Instructions
 
-- `GET /api/instructions` - Get all instructions
-- `GET /api/instructions/active` - Get active instruction
-- `POST /api/instructions` - Create new instruction
-- `PUT /api/instructions/:id` - Update instruction
-- `DELETE /api/instructions/:id` - Delete instruction
+- `GET /api/instructions` — Get all instructions
+- `POST /api/instructions` — Create a new instruction
 
-### Health
 
-- `GET /api/health` - Server health check
-
-## 🧪 Testing
-
-Test the API using Postman:
-
-1. Import the collection from [POSTMAN_GUIDE.md](./POSTMAN_GUIDE.md)
-2. Test each endpoint sequentially
-3. Verify responses match expected format
-
-## 🔐 Security
-
-- Environment variables for sensitive data
-- CORS protection
-- File size limits (25MB)
-- Input validation and sanitization
-- MongoDB injection prevention
-
-## 🚧 Future Enhancements
-
-- [ ] User authentication (JWT)
-- [ ] Multiple language support
-- [ ] Real-time transcription
-- [ ] Voice profile customization
-- [ ] Export history (PDF/CSV)
-- [ ] Audio playback of recordings
-- [ ] Rate limiting
-- [ ] Caching layer
-
-## 📝 License
-
-MIT License - feel free to use this project for learning and development
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-## 👤 Author
-
-**mandinumaneth**
-
-- GitHub: [@mandinumaneth](https://github.com/mandinumaneth)
-
-## 🙏 Acknowledgments
-
-- OpenAI for Whisper and GPT APIs
-- MongoDB for database
-- React and Vite communities
-
----
-
-**Built with ❤️ using MERN Stack + Groq**
